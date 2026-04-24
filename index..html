@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Surisec AI</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="icon" href="suriSecLogo.png" type="image/png">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <a href="#" class="logo" aria-label="Surisec AI home">
+                <span class="logo-badge logo-image-wrap"><img src="suriSecLogo.png" alt="" class="brand-logo-img"></span>
+                <span class="logo-copy">
+                    <span class="logo-text">Surisec AI</span>
+                    <span class="logo-tagline">Analyze. Learn. Secure.</span>
+                </span>
+            </a>
+            <nav class="nav-menu" id="site-nav">
+                <a href="#home">Home</a>
+                <a href="#features">Features</a>
+                <a href="#how-it-works">How It Works</a>
+                <a href="#team">Team</a>
+                <a href="#modes">Modes</a>
+            </nav>
+            <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Open menu">
+                <span></span>
+                <span></span>
+            </button>
+            <div class="nav-buttons">
+                <button class="btn btn-outline">Sign In</button>
+                <button class="btn btn-primary">Get Started</button>
+            </div>
+        </div>
+    </header>
+
+    <section id="home" class="hero">
+        <div class="matrix-background">
+            <canvas id="matrixCanvas"></canvas>
+        </div>
+        <div class="hero-noise"></div>
+        <div class="hero-content-overlay">
+            <div class="container">
+                <div class="hero-content">
+                    <h1 class="hero-title">
+                        Scan fast,
+                        <span class="hero-accent">fix smart.</span>
+                    </h1>
+                    <p class="hero-subtitle">Surisec AI helps student developers check website risks, understand what they mean, and learn safe ways to fix them in a beginner-friendly way.</p>
+                    <div class="hero-highlights">
+                        <div class="highlight-pill"><i class="fas fa-bolt"></i> Fast setup</div>
+                        <div class="highlight-pill"><i class="fas fa-file-shield"></i> Clear reports</div>
+                        <div class="highlight-pill"><i class="fas fa-wave-square"></i> Live monitoring</div>
+                    </div>
+                    <div class="hero-form hero-form-inline">
+                        <div class="input-group">
+                            <input type="url" placeholder="https://yourwebsite.com" class="url-input">
+                            <button class="btn btn-primary btn-large">Start Scan <i class="fas fa-bug"></i></button>
+                        </div>
+                    </div>
+                </div>
+                <div class="hero-visual">
+                    <div class="hero-stack">
+                        <div class="security-score-card">
+                            <div class="score-card-label">Security posture</div>
+                            <div class="score-card-main">
+                                <div class="score-value">82</div>
+                                <div class="score-copy">
+                                    <strong>Good</strong>
+                                    <span>3 issues need attention</span>
+                                </div>
+                            </div>
+                            <div class="score-trend"><i class="fas fa-arrow-trend-up"></i> +18% from the last scan</div>
+                        </div>
+                        <div class="terminal-window">
+                            <div class="terminal-header">
+                                <div class="terminal-dots">
+                                    <span class="dot red"></span>
+                                    <span class="dot yellow"></span>
+                                    <span class="dot green"></span>
+                                </div>
+                                <div class="terminal-title">surisec-ai ~/production</div>
+                            </div>
+                            <div class="terminal-body">
+                                <div class="terminal-line">$ surisec init student-scan</div>
+                                <div class="terminal-line">Loading safe profile...</div>
+                                <div class="terminal-line"><span class="terminal-arrow">&rarr;</span> Mode: <span class="highlight">Quick Scan</span></div>
+                                <div class="terminal-line"><span class="terminal-arrow">&rarr;</span> OWASP concepts mapped...</div>
+                                <div class="terminal-line"><span class="terminal-arrow">&rarr;</span> Destructive tests: <span class="success">Disabled</span></div>
+                                <div class="terminal-cursor"></div>
+                            </div>
+                        </div>
+                        <div class="floating-alert-card">
+                            <div class="floating-alert-label">Priority item</div>
+                            <div class="floating-alert-title">Outdated dependency detected</div>
+                            <p>Upgrade <code>auth-kit</code> from <code>2.1.4</code> to <code>2.3.1</code>.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="team" class="trusted-by">
+        <div class="container">
+            <div class="trusted-intro">
+                <h2>Capstone Team</h2>
+                <p class="trusted-subtext">The people shaping the analysis, security logic, and reporting flow behind Surisec AI.</p>
+            </div>
+            <div class="team-strip team-marquee">
+                <div class="marquee-shell">
+                    <div class="marquee-content">
+                        <div class="marquee-track">
+                            <div class="logo-item">
+                                <strong>Reymond Joaquin</strong>
+                                <span>Lead Programmer</span>
+                            </div>
+                            <div class="logo-item">
+                                <strong>Leo Dorado</strong>
+                                <span>System Analyst</span>
+                            </div>
+                            <div class="logo-item">
+                                <strong>Maria Santos</strong>
+                                <span>UI/UX Designer</span>
+                            </div>
+                            <div class="logo-item">
+                                <strong>Carlos Rivera</strong>
+                                <span>QA Engineer</span>
+                            </div>
+                            <div class="logo-item">
+                                <strong>Andrea Morales</strong>
+                                <span>Documentation Lead</span>
+                            </div>
+                        </div>
+                        <div class="marquee-track" aria-hidden="true">
+                            <div class="logo-item">
+                                <strong>Reymond Joaquin</strong>
+                                <span>Lead Programmer</span>
+                            </div>
+                            <div class="logo-item">
+                                <strong>Leo Dorado</strong>
+                                <span>System Analyst</span>
+                            </div>
+                            <div class="logo-item">
+                                <strong>Maria Santos</strong>
+                                <span>UI/UX Designer</span>
+                            </div>
+                            <div class="logo-item">
+                                <strong>Carlos Rivera</strong>
+                                <span>QA Engineer</span>
+                            </div>
+                            <div class="logo-item">
+                                <strong>Andrea Morales</strong>
+                                <span>Documentation Lead</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="features" class="features">
+        <div class="container">
+            <div class="section-header">
+                <h2>Built for Learning Website Security</h2>
+                <p>Simple tools that help students scan, understand, and practice safer web development.</p>
+            </div>
+            <div class="feature-showcase">
+                <article class="feature-story">
+                    <div class="feature-story-copy">
+                        <div class="feature-icon">
+                            <i class="fas fa-bug"></i>
+                        </div>
+                        <span class="feature-kicker"><strong>#1</strong> Scanner</span>
+                        <h3>Check website risks safely</h3>
+                        <p>Run safe scans based on OWASP ideas and show results in a way student developers can understand.</p>
+                    </div>
+                    <div class="feature-image-placeholder">
+                        <div class="placeholder-content">
+                            <i class="fas fa-image"></i>
+                            <span>Scanner screenshot soon</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="feature-story">
+                    <div class="feature-story-copy">
+                        <div class="feature-icon">
+                            <i class="fas fa-robot"></i>
+                        </div>
+                        <span class="feature-kicker"><strong>#2</strong> Assistant</span>
+                        <h3>Explain results in simple words</h3>
+                        <p>Use the AI assistant to explain risks, fixes, and security terms through Basic, Intermediate, or Technical modes.</p>
+                    </div>
+                    <div class="feature-image-placeholder">
+                        <div class="placeholder-content">
+                            <i class="fas fa-image"></i>
+                            <span>AI assistant screenshot soon</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="feature-story">
+                    <div class="feature-story-copy">
+                        <div class="feature-icon">
+                            <i class="fas fa-flag-checkered"></i>
+                        </div>
+                        <span class="feature-kicker"><strong>#3</strong> Training</span>
+                        <h3>Practice through labs and quizzes</h3>
+                        <p>Learn security by doing guided quizzes, mini labs, and safe CTF-style challenges.</p>
+                    </div>
+                    <div class="feature-image-placeholder">
+                        <div class="placeholder-content">
+                            <i class="fas fa-image"></i>
+                            <span>Training image soon</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="feature-story">
+                    <div class="feature-story-copy">
+                        <div class="feature-icon">
+                            <i class="fas fa-sync-alt"></i>
+                        </div>
+                        <span class="feature-kicker"><strong>#4</strong> Progress</span>
+                        <h3>Track growth over time</h3>
+                        <p>Use scan history, ranks, and leaderboards to help students stay motivated while learning.</p>
+                    </div>
+                    <div class="feature-image-placeholder">
+                        <div class="placeholder-content">
+                            <i class="fas fa-image"></i>
+                            <span>Progress image soon</span>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <section id="how-it-works" class="how-it-works">
+        <div class="container">
+            <div class="section-header">
+                <h2>How Surisec AI Works</h2>
+                <p>Security testing simplified in three easy steps</p>
+            </div>
+            <div class="how-layout">
+                <div class="how-list">
+                    <div class="how-item">
+                        <div class="step-number">1</div>
+                        <div class="how-item-copy">
+                            <h3>Enter Your Website</h3>
+                            <p>Paste your URL and start scanning immediately.</p>
+                            <span class="how-item-note">Pick a safe scan mode and begin with your target website.</span>
+                        </div>
+                    </div>
+                    <div class="how-item">
+                        <div class="step-number">2</div>
+                        <div class="how-item-copy">
+                            <h3>Analyze Safely</h3>
+                            <p>Surisec AI reviews your site using safe checks based on OWASP concepts.</p>
+                            <span class="how-item-note">No harmful or destructive actions are performed.</span>
+                        </div>
+                    </div>
+                    <div class="how-item">
+                        <div class="step-number">3</div>
+                        <div class="how-item-copy">
+                            <h3>Review the Fixes</h3>
+                            <p>See the risk, why it matters, and what to do next.</p>
+                            <span class="how-item-note">Switch between explanation modes based on your skill level.</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="video-card">
+                    <div class="video-frame">
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/yqWX86uT5jM?si=7jNF-BcFpQEXELzw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="testimonials" class="testimonials">
+        <div class="container">
+            <div class="section-header">
+                <h2>Built Through Team Collaboration</h2>
+                <p>Perspectives from the people helping shape Surisec AI as a capstone security learning project.</p>
+            </div>
+            <div class="testimonial-grid">
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <p>"Our goal with Surisec AI is to make website security easier to understand for students, especially those who are just starting to learn secure development."</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Sarah Johnson">
+                        <div>
+                            <h4>Andrea Morales</h4>
+                            <p>Documentation Lead</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <p>"We designed the system to explain findings clearly, not just label them as risky. The educational part is what makes the project meaningful."</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <img src="LeoProfile.jpg" alt="Leo Dorado">
+                        <div>
+                            <h4>Leo Dorado</h4>
+                            <p>System Analyst</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <p>"Surisec AI is built to guide beginners from confusion to understanding, so users can learn what the issue means and how they can fix it safely."</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Emma Rodriguez">
+                        <div>
+                            <h4>Carlos Rivera</h4>
+                            <p>QA Engineer</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="modes" class="pricing">
+        <div class="container">
+            <div class="section-header">
+                <h2>Scan Modes for Every Need</h2>
+                <p>Choose the depth that fits your goal while keeping every scan safe, ethical, and beginner-friendly.</p>
+            </div>
+            <div class="pricing-grid">
+                <div class="pricing-card">
+                    <h3>Quick Scan</h3>
+                    <div class="price">Fast<span> mode</span></div>
+                    <p>Best for quick checks and first-time users who want a simple starting point.</p>
+                    <ul>
+                        <li>Fast scan with limited checks</li>
+                        <li>Beginner-friendly basic results</li>
+                        <li>Ideal for landing page quick scan</li>
+                        <li>Safe and non-intrusive review</li>
+                    </ul>
+                    <button class="btn btn-outline">Try Quick Scan</button>
+                </div>
+                <div class="pricing-card featured">
+                    <div class="popular-badge">Recommended</div>
+                    <h3>Standard Scan</h3>
+                    <div class="price">Balanced<span> mode</span></div>
+                    <p>The recommended option for most users who want deeper feedback without extra complexity.</p>
+                    <ul>
+                        <li>Balanced scan coverage</li>
+                        <li>Clear risk levels and explanations</li>
+                        <li>Guided fixes for common issues</li>
+                        <li>Recommended for dashboard users</li>
+                        <li>Safe and non-destructive analysis</li>
+                    </ul>
+                    <button class="btn btn-primary">Use Standard Scan</button>
+                </div>
+                <div class="pricing-card">
+                    <h3>Deep Scan</h3>
+                    <div class="price">Extended<span> mode</span></div>
+                    <p>For users who want broader coverage and more detailed educational feedback.</p>
+                    <ul>
+                        <li>More complete safe coverage</li>
+                        <li>More detailed vulnerability context</li>
+                        <li>Best for deeper learning and review</li>
+                        <li>Supports advanced explanation modes</li>
+                        <li>Still ethical and non-intrusive</li>
+                    </ul>
+                    <button class="btn btn-outline">Run Deep Scan</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Ready to Secure Your Website?</h2>
+                <p>Explore Surisec AI and learn how safer website scanning can help students and beginner developers understand security issues with more clarity and confidence.</p>
+                <button class="btn btn-primary btn-large">Start Scanning</button>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <div class="footer-logo">
+                        <span class="logo-badge logo-image-wrap"><img src="suriSecLogo.png" alt="" class="brand-logo-img"></span>
+                        <span class="logo-copy">
+                            <span class="logo-text">Surisec AI</span>
+                            <span class="logo-tagline">Analyze. Learn. Secure.</span>
+                        </span>
+                    </div>
+                    <p>Making web security simple and accessible for everyone.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-github"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Product</h4>
+                    <ul>
+                        <li><a href="#">Features</a></li>
+                        <li><a href="#">Pricing</a></li>
+                        <li><a href="#">API</a></li>
+                        <li><a href="#">Integrations</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="#">Documentation</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Tutorials</a></li>
+                        <li><a href="#">Support</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">Contact</a></li>
+                        <li><a href="#">Partners</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Surisec AI. All rights reserved.</p>
+                <div class="footer-links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
