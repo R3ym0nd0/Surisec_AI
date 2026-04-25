@@ -58,17 +58,38 @@ if (canvas) {
 }
 
 if (navToggle && header && navMenu) {
+    function closeNav() {
+        header.classList.remove('nav-open');
+        navToggle.setAttribute('aria-expanded', 'false');
+        navToggle.setAttribute('aria-label', 'Open menu');
+    }
+
     navToggle.addEventListener('click', () => {
         const isOpen = header.classList.toggle('nav-open');
         navToggle.setAttribute('aria-expanded', String(isOpen));
         navToggle.setAttribute('aria-label', isOpen ? 'Close menu' : 'Open menu');
     });
 
-    navMenu.querySelectorAll('a').forEach((link) => {
-        link.addEventListener('click', () => {
-            header.classList.remove('nav-open');
-            navToggle.setAttribute('aria-expanded', 'false');
-            navToggle.setAttribute('aria-label', 'Open menu');
-        });
+    navMenu.querySelectorAll('a, button').forEach((item) => {
+        item.addEventListener('click', closeNav);
+    });
+
+    document.addEventListener('click', (event) => {
+        if (!header.classList.contains('nav-open')) {
+            return;
+        }
+
+        const clickedInsideNav = navMenu.contains(event.target);
+        const clickedToggle = navToggle.contains(event.target);
+
+        if (!clickedInsideNav && !clickedToggle) {
+            closeNav();
+        }
+    });
+
+    document.addEventListener('keydown', (event) => {
+        if (event.key === 'Escape') {
+            closeNav();
+        }
     });
 }
